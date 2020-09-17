@@ -1,9 +1,8 @@
 import { PesoAlturaModel } from './../models/pesoAlturaModel';
 import { ResultModel } from './../models/resultModel';
-import { AnaliseImcModel } from './../models/analiseImcModel';
 import { tap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 

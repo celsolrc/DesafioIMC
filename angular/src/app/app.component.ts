@@ -16,11 +16,6 @@ export class AppComponent implements OnInit {
   public form: FormGroup;
   public formSubmitAttempt: boolean; // {2}
 
-  resultadoTxt = '';
-  erroResult = false;
-
-  isOpen = true;
-
   constructor(private fb: FormBuilder,
               private imcService: ImcService,
               private popupModalService: PopupModalService) {  }
@@ -45,7 +40,7 @@ export class AppComponent implements OnInit {
 
       this.imcService.getAnalise( pesoAltura ).subscribe( result => {
 
-        if (!this.erroResult) {
+        if (!result.error) {
           this.popupModalService.dialogoGenerico('Analise do IMC', result.result.descricao);
         }
       });
